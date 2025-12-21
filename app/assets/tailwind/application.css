@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #2bee79;
+    --color-background-light: #f6f8f7;
+    --color-background-dark: #102217;
+    --color-surface-dark: #1c2b23;
+    --color-surface-input: #22352b;
+
+    --radius-default: 1rem;
+    --radius-lg: 2rem;
+    --radius-xl: 3rem;
+
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.2);
+    --shadow-floating: 0 4px 20px rgba(43, 238, 121, 0.4);
+
+    --font-display: "Spline Sans", system-ui, sans-serif;
+    --font-body: "Noto Sans", system-ui, sans-serif;
+}

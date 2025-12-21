@@ -1,16 +1,102 @@
-<p style="color: green"><%= notice %></p>
+<div class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased">
 
-<% content_for :title, "Services" %>
+<div class="relative min-h-screen w-full flex flex-col mx-auto max-w-md bg-background-light dark:bg-background-dark shadow-2xl overflow-hidden border-x border-surface-dark/50">
 
-<h1>Services</h1>
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md pb-2 border-b border-white/5">
+    <div class="flex items-center justify-between px-5 pt-6 pb-2">
+      <div>
+        <p class="text-sm text-gray-400 font-medium tracking-wide">Good Morning,</p>
+        <h2 class="text-2xl font-bold">Explore Services</h2>
+      </div>
+      <div class="relative">
+        <div class="size11 rounded-full bg-cover bg-center border-2 border-surface-input" 
+             style='background-image: url("https://lh3.googleusercontent.com/aida-public/...")'></div>
+        <div class="absolute bottom-0 right-0 size-3 bg-primary rounded-full border-2 border-background-dark"></div>
+      </div>
+    </div>
 
-<div id="services">
-  <% @services.each do |service| %>
-    <%= render service %>
-    <p>
-      <%= link_to "Show this service", service %>
-    </p>
-  <% end %>
+    <!-- Search Bar -->
+    <div class="px-5 py-2">
+      <div class="flex w-full h-12 rounded-xl overflow-hidden shadow-sm">
+        <div class="flex items-center justify-center pl-4 bg-white dark:bg-surface-input text-gray-400">
+          <span class="material-symbols-outlined">search</span>
+        </div>
+        <input class="flex-1 h-full px-3 text-base bg-white dark:bg-surface-input placeholder-gray-500 text-slate-900 dark:text-white focus:outline-0 focus:ring-1 focus:ring-primary"
+               placeholder="What do you need help with?">
+        <div class="flex items-center justify-center px-4 bg-white dark:bg-surface-input text-primary cursor-pointer">
+          <span class="material-symbols-outlined">tune</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chips -->
+    <div class="flex gap-3 px-5 py-2 overflow-x-auto no-scrollbar">
+      <button class="h-9 shrink-0 rounded-full bg-primary shadow-[0_0_10px_rgba(43,238,121,0.2)] px-5">
+        <p class="text-background-dark text-sm font-semibold">All</p>
+      </button>
+      <button class="h-9 shrink-0 rounded-full bg-white dark:bg-surface-input border border-gray-200 dark:border-white/5 px-5">
+        <p class="text-slate-600 dark:text-white text-sm font-medium">Home Repair</p>
+      </button>
+      <!-- Adicione os outros chips aqui -->
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 flex flex-col gap-5 p-5 pb-32 overflow-y-auto">
+
+    <!-- Card template -->
+    <div class="flex flex-col rounded-xl bg-white dark:bg-surface-dark shadow-card overflow-hidden">
+      <div class="flex gap-4 p-4">
+        <div class="flex-1 flex flex-col justify-between">
+          <span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Design</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">Modern Logo & Brand Identity</h3>
+          <div class="flex items-center gap-2 mt-1">
+            <div class="size6 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/...")'></div>
+            <p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Alex M.</p>
+            <span class="text-xs text-gray-600 dark:text-gray-500">•</span>
+            <div class="flex items-center gap-0.5">
+              <span class="material-symbols-outlined text-primary text-[14px] fill-1">star</span>
+              <span class="text-xs font-bold text-slate-700 dark:text-white">4.9</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between mt-4">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">$50<span class="text-xs text-gray-500 font-normal">/hr</span></p>
+            <button class="h-8 px-4 bg-primary text-background-dark rounded-full text-xs font-bold uppercase tracking-wide">Book</button>
+          </div>
+        </div>
+        <div class="w-28 shrink-0 rounded-lg bg-cover bg-center min-h-[120px]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/...")'></div>
+      </div>
+    </div>
+
+    <!-- Repita o card para outros serviços -->
+
+  </main>
+
+  <!-- Floating Button -->
+  <button class="fixed bottom-24 right-5 size14 bg-primary text-background-dark rounded-full shadow-floating flex items-center justify-center">
+    <span class="material-symbols-outlined text-3xl">add</span>
+  </button>
+
+  <!-- Bottom Nav -->
+  <nav class="fixed bottom-0 left-0 right-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-xl border-t border-white/5 max-w-md mx-auto">
+    <div class="flex justify-around items-center h-20 pb-2">
+      <a href="#" class="flex flex-col items-center gap-1 p-2 group">
+        <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform fill-1">home</span>
+        <div class="absolute -bottom-2 left-1/2 w-1 h-1 bg-primary rounded-full"></div>
+      </a>
+      <a href="#" class="flex flex-col items-center gap-1 p-2 group">
+        <span class="material-symbols-outlined text-gray-400 group-hover:text-white transition-colors">search</span>
+      </a>
+      <a href="#" class="flex flex-col items-center gap-1 p-2 group relative">
+        <span class="material-symbols-outlined text-gray-400 group-hover:text-white transition-colors">chat_bubble</span>
+        <span class="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-background-dark"></span>
+      </a>
+      <a href="#" class="flex flex-col items-center gap-1 p-2 group">
+        <span class="material-symbols-outlined text-gray-400 group-hover:text-white transition-colors">person</span>
+      </a>
+    </div>
+  </nav>
+
 </div>
-
-<%= link_to "New service", new_service_path %>
+</div>
