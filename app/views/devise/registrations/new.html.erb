@@ -15,7 +15,7 @@
 
 <div class="flex flex-col items-center">
 <h1 class="text-slate-900 dark:text-white tracking-tight text-[32px] font-bold leading-tight text-center pt-4">Participar da Central de Talentos</h1>
-<p class="text-slate-500 dark:text-gray-400 text-base font-normal leading-normal pb-6 pt-2 text-center">Conecte-se com o do Capão Comprido em segundos</p>
+<p class="text-slate-500 dark:text-gray-400 text-base font-normal leading-normal pb-6 pt-2 text-center">Conecte-se com o Capão Comprido em segundos</p>
 </div>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
@@ -24,10 +24,10 @@
 
 
 <label class="flex flex-col w-full">
-  <p class="text-slate-900 dark:text-white text-sm font-medium leading-normal pb-2 ml-1">Nome</p>
-  <div class="flex w-full items-stretch rounded-full bg-white dark:bg-input-dark border border-gray-200 dark:border-input-border-dark focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all overflow-hidden h-14">
+  <p class="text-white text-sm font-medium leading-normal pb-2 ml-1">Nome</p>
+  <div class="flex w-full items-stretch rounded-full bg-input-dark border border-gray-200 dark:border-input-border-dark focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all overflow-hidden h-14">
     <%= f.text_field :name,
-      class: "flex w-full min-w-0 flex-1 bg-transparent text-slate-900 focus:outline-0 border-none h-full placeholder:text-gray-400 dark:placeholder:text-[#9db9a8] px-5 text-base",
+      class: "flex w-full min-w-0 flex-1 bg-transparent text-slate-900 focus:outline-0 border-none h-full placeholder:text-placeholder-light px-5 text-base text-white",
       placeholder: "João" %>
     <div class="text-gray-400 flex items-center pr-5 pl-2">
       <i class="fa-solid fa-user"></i>
@@ -36,10 +36,10 @@
 </label>
 
 <label class="flex flex-col w-full">
-  <p class="text-slate-900 dark:text-white text-sm font-medium leading-normal pb-2 ml-1">Sobrenome</p>
-  <div class="flex w-full items-stretch rounded-full bg-white dark:bg-input-dark border border-gray-200 dark:border-input-border-dark h-14">
+  <p class="text-white text-sm font-medium leading-normal pb-2 ml-1">Sobrenome</p>
+  <div class="flex w-full items-stretch rounded-full  dark:bg-input-dark border border-gray-200 dark:border-input-border-dark h-14">
     <%= f.text_field :last_name,
-      class: "flex w-full flex-1 bg-transparent text-slate-900 border-none px-5",
+      class: "flex w-full flex-1 bg-transparent border-none px-5 placeholder:text-placeholder-light text-white",
       placeholder: "da Silva" %>
     <div class="text-gray-400 flex items-center pr-5 pl-2">
       <i class="fa-solid fa-user"></i>
@@ -51,7 +51,7 @@
   <p class="text-slate-900 dark:text-white text-sm font-medium leading-normal pb-2 ml-1">Email</p>
   <div class="flex w-full items-stretch rounded-full bg-white dark:bg-input-dark border border-gray-200 dark:border-input-border-dark h-14">
     <%= f.email_field :email,
-      class: "flex w-full flex-1 bg-transparent text-slate-900 border-none px-5",
+      class: "flex w-full flex-1 bg-transparent placeholder:text-placeholder-light text-white border-none px-5",
       placeholder: "nome@examplo.com" %>
     <div class="text-gray-400 flex items-center pr-5 pl-2">
       <i class="fa-solid fa-envelope"></i>
@@ -64,8 +64,8 @@
     <p class="text-slate-900 dark:text-white text-sm font-medium leading-normal pb-2 ml-1">Telefone</p>
     <div class="flex w-full items-stretch rounded-full bg-white dark:bg-input-dark border border-gray-200 dark:border-input-border-dark h-14">
       <%= pf.telephone_field :phone,
-        class: "flex w-full flex-1 bg-transparent text-slate-900 border-none px-5",
-        placeholder: "(11) 99999-9999" %>
+        class: "flex w-full flex-1 bg-transparent placeholder:text-placeholder-light text-white border-none px-5",
+        placeholder: "(61) 99999-9999" %>
       <div class="text-gray-400 flex items-center pr-5 pl-2">
         <i class="fa-solid fa-phone"></i>
       </div>
@@ -76,7 +76,7 @@
     <p class="text-slate-900 dark:text-white text-sm font-medium leading-normal pb-2 ml-1">Endereço</p>
     <div class="flex w-full items-stretch rounded-full bg-white dark:bg-input-dark border border-gray-200 dark:border-input-border-dark h-14">
       <%= pf.text_field :address,
-        class: "flex w-full flex-1 bg-transparent text-slate-900 border-none px-5",
+        class: "flex w-full flex-1 bg-transparent placeholder:text-placeholder-light text-white border-none px-5",
         placeholder: "Rua, número, bairro" %>
       <div class="text-gray-400 flex items-center pr-5 pl-2">
         <i class="fa-solid fa-location-dot"></i>
@@ -87,9 +87,9 @@
 
 <label class="flex flex-col w-full">
   <p class="text-slate-900 dark:text-white text-sm font-medium pb-2 ml-1">Senha (mínimo 6 caracteres)</p>
-  <div class="flex w-full rounded-full bg-white dark:bg-input-dark border h-14">
+  <div class="flex w-full rounded-full bg-white dark:bg-input-dark border border-gray-200 h-14">
     <%= f.password_field :password,
-      class: "flex w-full flex-1 bg-transparent border-none px-5",
+      class: "flex w-full flex-1 bg-transparent placeholder:text-placeholder-light text-white border-none px-5",
       placeholder: "••••••••" %>
     <div class="text-gray-400 flex items-center pr-5 pl-2">
       <i class="fa-solid fa-eye-slash"></i>
@@ -99,9 +99,9 @@
 
 <label class="flex flex-col w-full">
   <p class="text-slate-900 dark:text-white text-sm font-medium pb-2 ml-1">Confirmar Senha</p>
-  <div class="flex w-full rounded-full bg-white dark:bg-input-dark border h-14">
+  <div class="flex w-full rounded-full bg-white dark:bg-input-dark border border-gray-200 h-14">
     <%= f.password_field :password_confirmation,
-      class: "flex w-full flex-1 bg-transparent border-none px-5",
+      class: "flex w-full flex-1 bg-transparent placeholder:text-placeholder-light text-white border-none px-5",
       placeholder: "••••••••" %>
     <div class="text-gray-400 flex items-center pr-5 pl-2">
       <i class="fa-solid fa-lock"></i>
