@@ -37,7 +37,7 @@
 
 <label class="flex flex-col w-full">
   <p class="text-white text-sm font-medium leading-normal pb-2 ml-1">Sobrenome</p>
-  <div class="flex w-full items-stretch rounded-full  dark:bg-input-dark border border-gray-200 dark:border-input-border-dark h-14">
+  <div class="flex w-full items-stretch rounded-full  dark:bg-input-dark border border-gray-200 dark:border-input-border-dark focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all h-14">
     <%= f.text_field :last_name,
       class: "flex w-full flex-1 bg-transparent border-none px-5 placeholder:text-placeholder-light text-white",
       placeholder: "da Silva" %>
@@ -49,7 +49,7 @@
 
 <label class="flex flex-col w-full">
   <p class="text-slate-900 dark:text-white text-sm font-medium leading-normal pb-2 ml-1">Email</p>
-  <div class="flex w-full items-stretch rounded-full bg-white dark:bg-input-dark border border-gray-200 dark:border-input-border-dark h-14">
+  <div class="flex w-full items-stretch rounded-full bg-white dark:bg-input-dark border border-gray-200 dark:border-input-border-dark focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all h-14">
     <%= f.email_field :email,
       class: "flex w-full flex-1 bg-transparent placeholder:text-placeholder-light text-white border-none px-5",
       placeholder: "nome@examplo.com" %>
@@ -62,7 +62,7 @@
 <%= f.fields_for :provider do |pf| %>
   <label class="flex flex-col w-full">
     <p class="text-slate-900 dark:text-white text-sm font-medium leading-normal pb-2 ml-1">Telefone</p>
-    <div class="flex w-full items-stretch rounded-full bg-white dark:bg-input-dark border border-gray-200 dark:border-input-border-dark h-14">
+    <div class="flex w-full items-stretch rounded-full bg-white dark:bg-input-dark border border-gray-200 dark:border-input-border-dark focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all h-14">
       <%= pf.telephone_field :phone,
         class: "flex w-full flex-1 bg-transparent placeholder:text-placeholder-light text-white border-none px-5",
         placeholder: "(61) 99999-9999" %>
@@ -74,7 +74,7 @@
 
   <label class="flex flex-col w-full">
     <p class="text-slate-900 dark:text-white text-sm font-medium leading-normal pb-2 ml-1">Endereço</p>
-    <div class="flex w-full items-stretch rounded-full bg-white dark:bg-input-dark border border-gray-200 dark:border-input-border-dark h-14">
+    <div class="flex w-full items-stretch rounded-full bg-white dark:bg-input-dark border border-gray-200 dark:border-input-border-dark focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all h-14">
       <%= pf.text_field :address,
         class: "flex w-full flex-1 bg-transparent placeholder:text-placeholder-light text-white border-none px-5",
         placeholder: "Rua, número, bairro" %>
@@ -87,7 +87,7 @@
 
 <label class="flex flex-col w-full">
   <p class="text-slate-900 dark:text-white text-sm font-medium pb-2 ml-1">Senha (mínimo 6 caracteres)</p>
-  <div class="flex w-full rounded-full bg-white dark:bg-input-dark border border-gray-200 h-14">
+  <div class="flex w-full rounded-full bg-white dark:bg-input-dark border border-gray-200 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all h-14">
     <%= f.password_field :password,
       class: "flex w-full flex-1 bg-transparent placeholder:text-placeholder-light text-white border-none px-5",
       placeholder: "••••••••" %>
@@ -99,7 +99,7 @@
 
 <label class="flex flex-col w-full">
   <p class="text-slate-900 dark:text-white text-sm font-medium pb-2 ml-1">Confirmar Senha</p>
-  <div class="flex w-full rounded-full bg-white dark:bg-input-dark border border-gray-200 h-14">
+  <div class="flex w-full rounded-full bg-white dark:bg-input-dark border border-gray-200 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all h-14">
     <%= f.password_field :password_confirmation,
       class: "flex w-full flex-1 bg-transparent placeholder:text-placeholder-light text-white border-none px-5",
       placeholder: "••••••••" %>
